@@ -29,4 +29,10 @@ class Usuarios extends CI_Controller {
 		$dato["titulo"]="Hola desde controlador de usuarios";
 		$this->load->view('Usuarios/index',$dato);
 	}
+
+	// load data from database?
+	public function recargar()
+	{
+		
+	}
 }
