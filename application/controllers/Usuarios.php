@@ -22,6 +22,7 @@ class Usuarios extends CI_Controller {
 	public function __construct()
 	{
 		 parent::__construct();
+		 $this->load->model('UsuariosModel');
 	}
 
 	public function index()
@@ -33,6 +34,7 @@ class Usuarios extends CI_Controller {
 	// load data from database?
 	public function recargar()
 	{
-		
+		$data=['usuarios'=>$this->UsuariosModel->getAll()];
+		$this->load->view('usuarios/tabla',$data);
 	}
 }
