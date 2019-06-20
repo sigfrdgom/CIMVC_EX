@@ -15,9 +15,9 @@
 
         <input type="hidden" id="id">
         <label for="txtNombre">Nombre</label>
-        <input type="text" id="txtNombre"> <br>
+        <input type="text" id="txtNombre" required> <br>
         <label for="txtApellido">Apellido</label>
-        <input type="text" id="txtApellido"> <br>
+        <input type="text" id="txtApellido" required> <br>
 
         <button id="btn" value="ingresar">Agregar</button>
         

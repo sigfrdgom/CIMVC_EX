@@ -11,7 +11,6 @@ function recargar(){
     };
 
     peticion.open('GET','usuarios/recargar');
-
     peticion.send();
 }
 
@@ -35,11 +34,17 @@ function accion()
     var nombre=document.getElementById('txtNombre').value;
     var apellido=document.getElementById('txtApellido').value;
 
+    if (nombre == '' && apellido == '') {
+        alert("llena los campos");
+        return;
+    } 
+
     var peticion= new XMLHttpRequest();
     peticion.onreadystatechange=function(){
         if (this.readyState==4) {
             document.getElementById('cuerpo').innerHTML=this.responseText;
             recargar();
+            limpiar();
         }
     };
 
@@ -51,7 +56,6 @@ function accion()
 
 function eliminar() 
 {
-    
     alert('acccion realizada eliminar'); 
 }
 
@@ -59,4 +63,9 @@ function eliminar()
 function actualizar() 
 {
     alert('acccion realizada editar'); 
+}
+
+function limpiar() {
+    document.getElementById('txtNombre').value = '';
+    document.getElementById('txtApellido').value = '';
 }
