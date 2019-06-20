@@ -27,7 +27,7 @@ class Usuarios extends CI_Controller {
 
 	public function index()
 	{
-		$dato["titulo"]="Hola desde controlador de usuarios";
+		$dato["titulo"]="Usuarios";
 		$this->load->view('Usuarios/index',$dato);
 	}
 
@@ -36,5 +36,12 @@ class Usuarios extends CI_Controller {
 	{
 		$data=['usuarios'=>$this->UsuariosModel->getAll()];
 		$this->load->view('usuarios/tabla',$data);
+	}
+
+	// Metodo para registrar
+	public function ingresar()
+	{
+		$data=[$_POST['nombre'],$_POST['apellido']];
+		$this->usuariosModel->ingresar($data);
 	}
 }

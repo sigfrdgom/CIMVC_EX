@@ -5,10 +5,10 @@
         <td><?= $usuario->nombre ?></td>
         <td><?= $usuario->apellido ?></td>
         <td>
-            <button> Editar</button>
+            <button class="btnEditar" value="<?= $usuario->id ?>"> Editar</button>
         </td>
         <td>
-            <button> Eliminar</button>
+            <button class="btnEliminar" value="<?= $usuario->id ?>"> Eliminar</button>
         </td>
     </tr>
 

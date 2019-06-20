@@ -11,6 +11,19 @@
         <?= $titulo?>
     </h1>
 
+    <div id="frm" style="border: 1px dotted blue;">
+
+        <input type="hidden" id="id">
+        <label for="txtNombre">Nombre</label>
+        <input type="text" id="txtNombre"> <br>
+        <label for="txtApellido">Apellido</label>
+        <input type="text" id="txtApellido"> <br>
+
+        <button id="btn" value="ingresar">Agregar</button>
+        
+
+    </div>
+<br>
     <div>
         <!-- Creating a table -->
         <table style="border: dotted 1px blue">
