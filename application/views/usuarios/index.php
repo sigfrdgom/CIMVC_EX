@@ -15,13 +15,12 @@
 
         <input type="hidden" id="id">
         <label for="txtNombre">Nombre</label>
-        <input type="text" id="txtNombre" required> <br>
+        <input type="text" id="txtNombre" required placeholder="nombres"> <br>
         <label for="txtApellido">Apellido</label>
-        <input type="text" id="txtApellido" required> <br>
+        <input type="text" id="txtApellido" required placeholder="apelidos"> <br>
 
         <button id="btn" value="ingresar">Agregar</button>
         
-
     </div>
 <br>
     <div>

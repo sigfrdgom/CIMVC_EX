@@ -44,4 +44,34 @@ class Usuarios extends CI_Controller {
 		$data=[$_POST['nombre'],$_POST['apellido']];
 		$this->usuariosModel->ingresar($data);
 	}
+
+	// Metodo para eliminar
+	public function delete($id)
+	{
+		// Llamar el metodo eliminar del modelo
+		$this->usuariosModel->delete($id);
+	}
+
+	// Metodo para obtner un solo registro
+	public function getById($id)
+	{
+		// Para obtener los datos del registro que deseamos de la base de datos
+		$dato=['usuario'=>$this->usuariosModel->getById($id)];
+		$this->load->view('usuarios/form',$dato);
+	}
+
+
+	// Metodo para editar
+	public function editar()
+	{
+		$data=[$_POST['nombre'],$_POST['apellido'],$_POST['id']];
+		$this->usuariosModel->update($data);
+	}
+
+	
+	// Un pequeño endpoint de rest
+	public function json(){
+		echo json_encode($this->UsuariosModel->getAll());
+	}
+
 }
